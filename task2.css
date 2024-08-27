@@ -1,3 +1,4 @@
+/* CSS for background images */
 #img1 {
     background-size: cover;
     background-image: url(./ig7.jpg);
@@ -9,24 +10,44 @@
 }
 
 .grid-container {
-    background-size: cover;
-    background-image: url(./ig8.jpg);
-}
-
-
-.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 0fr);
-    justify-content: center;
-    grid-template-rows: repeat(3, 0fr);
-    gap: 20px; Adjust the gap between images if needed
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts based on screen size */
+    gap: 20px; /* Adjust the gap between images if needed */
 }
 
-
-
-.grid-container img { 
-    width:200px; /* Set the size for each image */
-    height: 300px; /* Ensure the images are square */
-    object-fit: cover; /* Maintain aspect ratio */
+.grid-container img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
-   
+
+/* Additional styling */
+.bg-info-subtle {
+    background-color: rgba(23, 162, 184, 0.1); /* Example color */
+}
+
+.bg-secondary-subtle {
+    background-color: rgba(108, 117, 125, 0.1); /* Example color */
+}
+
+.bg-success-subtle {
+    background-color: rgba(40, 167, 69, 0.1); /* Example color */
+}
+
+.bg-warning-subtle {
+    background-color: rgba(255, 193, 7, 0.1); /* Example color */
+}
+
+.text-white {
+    color: #fff; /* White text for readability */
+}
+
+@media (max-width: 768px) {
+    .grid-item h1 {
+        font-size: 1.5rem;
+    }
+
+    .grid-item p {
+        font-size: 0.875rem;
+    }
+}
